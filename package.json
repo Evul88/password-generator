@@ -12,6 +12,8 @@
     "vite": "^5.1.4"
   },
   "dependencies": {
+    "generate-password": "^1.7.1",
+    "generate-password-browser": "^1.1.0",
     "sass": "^1.71.1"
   }
 }

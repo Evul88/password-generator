@@ -55,6 +55,8 @@ body{
     @include headingM();
     text-align: center;
 
+    margin-bottom: 31px;
+
     color: $grey;
 }
 
@@ -64,7 +66,7 @@ body{
     align-items: center;
 
     padding: 19px 32px;
-    margin-bottom: 10px;
+    margin-bottom: 24px;
 
     background-color: $darkGrey;
 }
@@ -79,14 +81,18 @@ body{
 
 .length{
     display: grid;
-    grid-template-columns: max-content max-content;
-    grid-template-rows: max-content max-content;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-content: space-between;
+    align-items: center;
+
+    position: relative;
 }
 
 .checkContainer{
     display: flex;
     align-items: center;
-    gap: 24px;
+    gap: 18px;
 }
 
 .checkbox{
@@ -113,16 +119,27 @@ body{
             display: block;
         }
     }
+
+    &:hover{
+        border-color: $neonGreen;
+    }
 }
 
 .strength{
+
     &-component{
         background-color: $veryDarkGrey;
         display: flex;
         justify-content: space-between;
         align-items: center;
 
-        padding: 23px 32px;
+        padding: 10px 32px;
+        margin-bottom: 12px;
+        margin-top: 18px;
+    }
+
+    &-label{
+        color: $grey
     }
     
     &-indicator{
@@ -141,6 +158,10 @@ body{
             width: 10px;
             box-shadow: inset 0 0 0 2px $almostWhite;
         }
+    }
+
+    &-text{
+        margin: 0;
     }
 }
 
@@ -187,6 +208,14 @@ body{
     @include bodyText();
     background-color: $neonGreen;
     padding: 21px;
+    cursor: pointer;
+    border: 0;
+
+    &:hover{
+        background-color: transparent;
+        color: $neonGreen;
+        box-shadow: inset 0 0 0 2px $neonGreen;
+    }
 }
 
 #length {
@@ -195,13 +224,17 @@ body{
     appearance: none;
     background-color: $veryDarkGrey;
     height: 8px;
+    margin-bottom: 20px;
 
     &::-webkit-slider-thumb {
         appearance: none;
         height: 28px;
         width: 28px;
         border-radius: 50%;
-        background: $almostWhite;        
+        background: $almostWhite;
+        position: relative;
+        z-index: 2;
+        cursor: pointer;
     }
 
     &:hover{
@@ -219,17 +252,25 @@ body{
 #lengthValue{
     @include headingL();
     color: $neonGreen;
+    margin-left: auto;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 #copy{
     display: flex;
-    text-align: center;
+    align-items: center;
     justify-content: center;
+    gap: 10px;
     color: $neonGreen;
 }
 
 #copyText{
+    background-color: transparent;
     display: none;
+    opacity: 0;
+    margin: 0;
+    transition: opacity 1s ease-in-out;
 }
 
 #copyIcon{
@@ -247,6 +288,17 @@ body{
     background-color: transparent;
     border: 0;
     resize: none;
+    overflow-y: hidden;
 
     color: $almostWhite;
+}
+
+#progressBar{
+    width: 0%;
+    height: 6px;
+    background-color: $neonGreen;
+    position: absolute;
+    bottom: 35px;
+    left: 2px;
+    z-index: 1;
 }
