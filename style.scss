@@ -83,8 +83,110 @@ body{
     grid-template-rows: max-content max-content;
 }
 
+.checkContainer{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
 .checkbox{
+    height: 20px;
+    width: 20px;
+    appearance: none;
+    border: 2px solid $almostWhite;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::after{
+        content: url(./icons/icon-check.svg);
+        display: none;
+        height: 10px;
+    }
+
+    &:checked{
+        background-color: $neonGreen;
+        border: 0;
+
+        &::after{
+            display: block;
+        }
+    }
+}
+
+.strength{
+    &-component{
+        background-color: $veryDarkGrey;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        padding: 23px 32px;
+    }
     
+    &-indicator{
+        @include headingM();
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    &-bars{
+        display: flex;
+        gap: 10px;
+
+        & *{
+            height: 28px;
+            width: 10px;
+            box-shadow: inset 0 0 0 2px $almostWhite;
+        }
+    }
+}
+
+.red{
+    background-color: $red;
+    box-shadow: none;
+}
+
+.orange{
+    background-color: $orange;
+    box-shadow: none;
+}
+
+.yellow{
+    background-color: $yellow;
+    box-shadow: none;
+}
+
+.green{
+    background-color: $neonGreen;
+    box-shadow: none;
+}
+
+.noPasswd{
+    display: flex;
+}
+
+.veryWeakPasswd{
+    display: none;
+}
+.weakPasswd{
+    display: none;
+}
+
+.mediumPasswd{
+    display: none;
+}
+
+.strongPasswd{
+    display: none;
+}
+
+#submit{
+    @include bodyText();
+    background-color: $neonGreen;
+    padding: 21px;
 }
 
 #length {
@@ -100,6 +202,17 @@ body{
         width: 28px;
         border-radius: 50%;
         background: $almostWhite;        
+    }
+
+    &:hover{
+        &::-webkit-slider-thumb {
+            appearance: none;
+            height: 28px;
+            width: 28px;
+            border-radius: 50%;
+            background: $veryDarkGrey;
+            box-shadow: inset 0 0 0 2px $neonGreen
+        }
     }
 }
 

@@ -26,25 +26,84 @@
               <p id="lengthValue"></p>
               <input type="range" name="length" id="length" min="0" max="20" step="1" value="0">
             </div>
-            <div>
+            <div class="checkContainer">
               <input type="checkbox" name="upper" id="upperCheck" class="checkbox">
               <label for="upperCheck">Include Uppercase Letters</label>
             </div>
-            <div>
+            <div class="checkContainer">
               <input type="checkbox" name="lower" id="lowerCheck" class="checkbox">
               <label for="lowerCheck">Include Lowercase Letters</label>
             </div>
-            <div>
+            <div class="checkContainer">
               <input type="checkbox" name="numbers" id="numbersCheck" class="checkbox">
               <label for="numbersCheck">Include Numbers</label>
             </div>
-            <div>
+            <div class="checkContainer">
               <input type="checkbox" name="symbols" id="symbolsCheck" class="checkbox">
               <label for="symbolsCheck">Include Symbols</label>
             </div>
             <div id="strength">
+              <div class="noPasswd strength-component">
+                <p class="strength-label">STRENGTH</p>
+                <div class="strength-indicator">
+                  <div class="strength-bars">
+                    <div class="strength-bar-1"></div>
+                    <div class="strength-bar-2"></div>
+                    <div class="strength-bar-2"></div>
+                    <div class="strength-bar-4"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="veryWeakPasswd strength-component">
+                <p class="strength-label">STRENGTH</p>
+                <div class="strength-indicator">
+                  <p class="strength-text">TOO WEAK!</p>
+                  <div class="strength-bars">
+                    <div class="strength-bar-1 red"></div>
+                    <div class="strength-bar-2"></div>
+                    <div class="strength-bar-2"></div>
+                    <div class="strength-bar-4"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="weakPasswd strength-component">
+                <p class="strength-label">STRENGTH</p>
+                <div class="strength-indicator">
+                  <p class="strength-text">WEAK</p>
+                  <div class="strength-bars">
+                    <div class="strength-bar-1 orange"></div>
+                    <div class="strength-bar-2 orange"></div>
+                    <div class="strength-bar-3"></div>
+                    <div class="strength-bar-4"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="mediumPasswd strength-component">
+                <p class="strength-label">STRENGTH</p>
+                <div class="strength-indicator">
+                  <p class="strength-text">MEDIUM</p>
+                  <div class="strength-bars">
+                    <div class="strength-bar-1 yellow"></div>
+                    <div class="strength-bar-2 yellow"></div>
+                    <div class="strength-bar-3 yellow"></div>
+                    <div class="strength-bar-4"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="strongPasswd strength-component">
+                <p class="strength-label">STRENGTH</p>
+                <div class="strength-indicator">
+                  <p class="strength-text">STRONG</p>
+                  <div class="strength-bars">
+                    <div class="strength-bar-1 green"></div>
+                    <div class="strength-bar-2 green"></div>
+                    <div class="strength-bar-3 green"></div>
+                    <div class="strength-bar-4 green"></div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <input type="submit" value="Generate ➔">
+            <input type="submit" value="GENERATE ➔" id="submit">
           </form>
         </div>
       </div>
