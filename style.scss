@@ -302,3 +302,41 @@ body{
     left: 2px;
     z-index: 1;
 }
+
+@media screen and (max-width: 375px) {
+    .generator {
+        width: 343px;
+    }
+    
+    .generator, .password, .length, .strength-component {
+        padding: 0 16px;
+    }
+    
+    .container{
+        padding: 50px;
+    }
+
+    .config{
+        padding: 16px;
+    }
+
+    body{
+        width: 375px;
+    }
+
+    #submit {
+        padding: 16px 21px;
+    }
+
+    #progressBar{
+        left: 17px;
+        bottom:47px;
+        max-width: 250px;
+    }
+}
+
+@media screen and (max-width: 768px) and (min-width: 375px) {
+    .generator {
+        width: 540px;
+    }
+}
